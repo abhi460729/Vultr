@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrdersReport" pageWidth="500" pageHeight="842" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d4397311-790c-40ae-b6c7-46fbebdd54f7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Sans_Bold" fontName="DejaVu Sans" fontSize="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Sans_Italic" fontName="DejaVu Sans" fontSize="8" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+	<queryString language="xPath">
+		<![CDATA[/Print/Apis/Api]]>
+	</queryString>
+	<field name="ItemID" class="java.lang.String">
+		<fieldDescription><![CDATA[Output/Item/@ItemID]]></fieldDescription>
+	</field>
+	<field name="OrganizationCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Output/Item/@OrganizationCode]]></fieldDescription>
+	</field>
+	<field name="UnitOfMeasure" class="java.lang.String">
+		<fieldDescription><![CDATA[Output/Item/@UnitOfMeasure]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="14">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="2" width="356" height="10" forecolor="#CCFFFF" backcolor="#CCFFFF" uuid="f85adf60-e60b-4e8b-83fb-6caf4cb6ed13"/>
+				<staticText>
+					<reportElement style="Sans_Bold" mode="Opaque" x="0" y="0" width="48" height="10" backcolor="#CCFFFF" uuid="b168eb64-12bc-4831-a8cf-bb48d89f900f"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[ItemID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Sans_Bold" mode="Opaque" x="146" y="0" width="108" height="10" backcolor="#CCFFFF" uuid="91ea9b99-8f14-4ffb-bcae-b84afa5e3090"/>
+					<text><![CDATA[OrganizationCode]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Sans_Bold" mode="Opaque" x="259" y="0" width="92" height="10" backcolor="#CCFFFF" uuid="5d2acee6-445c-482b-a606-7f3acae3ecd4"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[UnitOfMeasure]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="268">
+			<textField>
+				<reportElement x="0" y="2" width="51" height="10" uuid="1676d376-4551-4e8f-b281-7e557b3e887a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ItemID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="146" y="2" width="108" height="10" uuid="d37aef7b-e767-4dda-a82c-bec8b28b0c2d"/>
+				<textFieldExpression><![CDATA[$F{OrganizationCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
+				<reportElement positionType="Float" x="259" y="2" width="92" height="10" uuid="d94a1115-ff10-4fdb-9a93-742c73a57594"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{UnitOfMeasure}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
